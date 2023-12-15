@@ -14,5 +14,5 @@ license = "MIT"
 dioxus = { version = "0.4", default-features = false, features = ["macro", "hooks"] }
 
 [dev-dependencies]
-dioxus-desktop = "0.4.3"
+dioxus-desktop = "0.4"
 dioxus = { version = "0.4", default-features = true }
