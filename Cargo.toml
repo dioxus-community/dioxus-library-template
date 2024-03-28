@@ -1,6 +1,6 @@
 [package]
 name = "dioxus-library-template"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 description = "Library for Dioxus 🧬"
 readme = "./README.md"
@@ -11,8 +11,8 @@ categories = ["gui"]
 license = "MIT"
 
 [dependencies]
-dioxus = { version = "0.4", default-features = false, features = ["macro", "hooks"] }
+dioxus = { version = "0.5", default-features = false, features = ["macro", "hooks"] }
 
 [dev-dependencies]
 dioxus-desktop = "0.4"
-dioxus = { version = "0.4", default-features = true }
+dioxus = { version = "0.5", default-features = true }
