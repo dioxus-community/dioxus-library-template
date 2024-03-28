@@ -1,17 +1,20 @@
-use dioxus_library_template::layer::DevtoolsLogger;
-use tracing::info;
-use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
+use dioxus::prelude::*;
+use dioxus_library_template::prelude::*;
 
 fn main() {
-    let (devtools, layer) = DevtoolsLogger::new();
-    tracing_subscriber::registry().with(layer).init();
-
-    info!(scope_id = 1, name = "UseState", value = "123", hook_idx = 0, state = "added");
-
-    println!("{:#?}",devtools.lock().unwrap().scopes);
-
-    info!(scope_id = 1, name = "UseState", value = "123", hook_idx = 0, state = "removed");
-
-    println!("{:#?}",devtools.lock().unwrap().scopes);
+    dioxus_desktop::launch(app);
 }
 
+fn app(cx: Scope) -> Element {
+    let msg = use_dioxus(cx);
+
+    render! {
+        div {
+            display: "flex",
+            justify_content: "center",
+            h3 {
+                "{msg}"
+            }
+        }
+    }
+}
