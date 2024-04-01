@@ -2,7 +2,7 @@ use dioxus::prelude::*;
 use dioxus_library_template::prelude::*;
 
 fn main() {
-    dioxus_desktop::launch(app);
+    launch(app);
 }
 
 fn app() -> Element {
