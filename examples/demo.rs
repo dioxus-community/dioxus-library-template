@@ -2,13 +2,13 @@ use dioxus::prelude::*;
 use dioxus_library_template::prelude::*;
 
 fn main() {
-    dioxus_desktop::launch(app);
+    launch(app);
 }
 
-fn app(cx: Scope) -> Element {
-    let msg = use_dioxus(cx);
+fn app() -> Element {
+    let msg = use_dioxus();
 
-    render! {
+    rsx!(
         div {
             display: "flex",
             justify_content: "center",
@@ -16,5 +16,5 @@ fn app(cx: Scope) -> Element {
                 "{msg}"
             }
         }
-    }
+    )
 }
